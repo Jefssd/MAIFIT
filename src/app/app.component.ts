@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HomeComponent, } from './home/home.component';
-import { CartComponent, } from './cart/cart.component';
+import { RouterOutlet } from '@angular/router'; // Importando RouterOutlet para renderizar as páginas de acordo com as rotas
+import { HomeComponent } from './home/home.component'; // Importando HomeComponent
+import { CartComponent } from './cart/cart.component'; // Importando CartComponent
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, CartComponent], // Inclui o HomeComponent na lista de imports
+  imports: [HomeComponent, RouterOutlet, CartComponent], // Incluindo RouterOutlet e os componentes que você usará
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] // Corrigido de styleUrl para styleUrls
+  styleUrls: ['./app.component.css'], // Certifique-se de que o caminho está correto
 })
 export class AppComponent {
   title = 'mai-fit';
